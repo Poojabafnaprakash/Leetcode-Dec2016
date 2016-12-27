@@ -49,6 +49,10 @@ public class QueuesUsingLL {
 		}
 	}
 	
+	boolean isEmpty(){
+		return head == null;
+	}
+	
 	public static void main(String args[]){
 		QueuesUsingLL queue = new QueuesUsingLL();
 		queue.display(queue.head);
