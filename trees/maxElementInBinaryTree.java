@@ -3,9 +3,11 @@ package trees;
 public class maxElementInBinaryTree {
 	binaryTreeNode root;
 	
+	
+	
 	int MaxElement(binaryTreeNode root){
 		int max = Integer.MIN_VALUE;
-		while(root != null){
+		if(root != null){
 			int maxL, maxR;
 			maxL = MaxElement(root.leftLink);
 			maxR = MaxElement(root.rightLink);
