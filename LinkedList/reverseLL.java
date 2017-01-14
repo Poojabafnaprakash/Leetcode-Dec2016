@@ -10,23 +10,21 @@ package LinkedList;
  */
 public class reverseLL {
     public ListNode reverseList(ListNode head) {
-        if(head == null){
+    	if(head == null){
             return null;
         }
         
-        ListNode prev = head;
-        ListNode forward;
-        ListNode forwardNext;
+        ListNode curr = head;
+        ListNode nextNode;
+        ListNode prev = null;
         
-        forward = prev.next;
-        prev.next = null;
-        
-        while(forward != null){
-            forwardNext = forward.next;
-            forward.next = prev;
-            prev = forward;
-            forward = forwardNext;
+        while(curr!=null){
+            nextNode = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = nextNode;
         }
+        
         return prev;
     }
 }
