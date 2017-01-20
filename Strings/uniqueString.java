@@ -48,7 +48,8 @@ public class uniqueString {
 		for(int i=0; i<s.length();i++){
 			int value = s.charAt(i) - 'a';
 			if((setBit &(1<<value)) > 0){
-				flag = true; break;
+				flag = true; 
+				System.out.println(s.charAt(i));break;
 			}
 			else
 				setBit = setBit |(1<<value);
@@ -63,7 +64,7 @@ public class uniqueString {
 		uniqueString s = new uniqueString();
 		//s.checkUniqueString("pooja");
 		//s.checkUniqueBoolean("poja");
-		s.checkUniqueUsingBits("pooja");
+		s.checkUniqueUsingBits("ppooja");
 	}
 
 }
