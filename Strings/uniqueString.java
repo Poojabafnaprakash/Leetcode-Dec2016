@@ -64,7 +64,7 @@ public class uniqueString {
 		uniqueString s = new uniqueString();
 		//s.checkUniqueString("pooja");
 		//s.checkUniqueBoolean("poja");
-		s.checkUniqueUsingBits("ppooja");
+		s.checkUniqueUsingBits("abbca");
 	}
 
 }
