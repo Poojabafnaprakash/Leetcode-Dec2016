@@ -2,6 +2,7 @@ package Strings;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 public class frequencyOfCharacterInString {
 	public void freqOfCharacter(String s){		
@@ -22,6 +23,7 @@ public class frequencyOfCharacterInString {
 	public static void main(String args[]){
 		frequencyOfCharacterInString s = new frequencyOfCharacterInString();
 		s.freqOfCharacter("pooja");
+		
 	}
 
 
