@@ -46,4 +46,9 @@ public class firstUniqueCharacter {
         }
         return obj.position;
     }
+	
+	public static void main(String args[]){
+		firstUniqueCharacter obj = new firstUniqueCharacter();
+		obj.firstUniqCharUsingMap("abba");
+	}
 }

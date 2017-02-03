@@ -42,6 +42,23 @@ public class checkEquilateral {
 		else System.out.println("None of these");
 		
 	}
+	
+	public void checkEquilateralTriangle2(int a, int b, int c){	 		
+		if(a <= 0 || b <= 0 || c <= 0)
+        	System.out.println("None of these");
+		
+		if(a+b < c || b+c < a || c+a < b)
+			System.out.println("None of these");
+        else if(a == b && b == c)
+        	System.out.println("Equilateral");
+        else if(((a == b) && (a != c)) ||
+                ((a == c) && (a != b)) ||
+                ((b == c) && (b != a)))
+        	System.out.println("Isosceless");
+        else 
+        	System.out.println("None of these");
+}
+	
 	public static void main(String args[]){
 	    Scanner scan = new Scanner(System.in);
 	    checkEquilateral obj = new checkEquilateral();
@@ -54,9 +71,11 @@ public class checkEquilateral {
 	    }
 	    scan.close();
 	    for(int i = 0; i < lines; i++){
-	    	obj.checkTriangleMap(arr[i]);
-	    	obj.checkEquilateralTriangle(arr[i][0], arr[i][1], arr[i][2]);	    	
+	    	//obj.checkTriangleMap(arr[i]);
+	    	//obj.checkEquilateralTriangle(arr[i][0], arr[i][1], arr[i][2]);	 
+	    	obj.checkEquilateralTriangle2(arr[i][0], arr[i][1], arr[i][2]);	 
 	    }
 	    
+	  
 	}
 }

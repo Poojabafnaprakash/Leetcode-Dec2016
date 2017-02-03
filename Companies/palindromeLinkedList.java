@@ -8,6 +8,8 @@ package Companies;
   }
  
 public class palindromeLinkedList {
+	//time complexity: O(n) and spaceComplexity
+	
 	public ListNode reverse(ListNode node){
         ListNode prev = null;
         ListNode forward = null;
