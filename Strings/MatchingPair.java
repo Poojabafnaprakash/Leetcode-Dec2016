@@ -8,13 +8,18 @@ public class MatchingPair {
 		Stack<Character> stack = new Stack<Character>();
 		stack.push(s.charAt(0));
 		for(int i=1; i<s.length(); i++){
-			if(Character.isLowerCase(s.charAt(i)) && Character.isUpperCase(stack.peek())){
-				if(Character.toLowerCase(s.charAt(i)) == Character.toLowerCase(stack.peek())){
-					stack.pop();
-					pos = i;
+			if(!stack.isEmpty()){
+				if(Character.isLowerCase(s.charAt(i)) && Character.isUpperCase(stack.peek())){
+					if(Character.toLowerCase(s.charAt(i)) == Character.toLowerCase(stack.peek())){
+						stack.pop();
+						pos = i;
+					}
+					else{
+						break;
+					}
 				}
 				else{
-					break;
+					stack.push(s.charAt(i));
 				}
 			}
 			else{
